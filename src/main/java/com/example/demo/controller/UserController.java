@@ -83,7 +83,7 @@ public class UserController {
     public User signup(@RequestBody User user){
         return service.signup(user);
     }
-
+    //
 @PostMapping("/login")
 public String login(@RequestBody Map<String,String> data){
     return service.login(data.get("email"), data.get("password"));

@@ -2,6 +2,8 @@ package com.example.demo.service;
 
 import java.util.List;
 
+import org.springframework.data.domain.Page;
+
 import com.example.demo.modal.User;
 
 public interface UserService {
@@ -12,6 +14,13 @@ public interface UserService {
 
     // login returns JWT token
     String login(String email, String password);
+
+    String refreshAccessToken(String refreshToken);
+
+    
+      Page<User> getUsers(int page, int size);
+
+    
 
     List<User> getAll();
 

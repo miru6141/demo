@@ -7,6 +7,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
+import com.example.demo.modal.Product;
 import com.example.demo.modal.User;
 import com.example.demo.repository.UserRepository;
 import com.example.demo.security.JwtUtil;
@@ -18,6 +19,8 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserRepository repo;
+
+    
 
     @Autowired
     private PasswordEncoder passwordEncoder;
@@ -86,4 +89,7 @@ public class UserServiceImpl implements UserService {
     public void delete(String id) {
         repo.deleteById(id);
     }
+
+
+
 }
